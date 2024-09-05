@@ -1,6 +1,4 @@
 import streamlit as st
-
-# Importing the functions from your lab files
 from lab1 import run_lab1
 from lab2 import run_lab2
 
