@@ -1,16 +1,17 @@
 import streamlit as st
 
-def load_page(page_file):
-    with open(page_file, 'r') as file:
-        st.code(file.read())
+# Importing the functions from your lab files
+from lab1 import run_lab1
+from lab2 import run_lab2
 
+# Define pages using Streamlit's Page object (assuming Streamlit version >= 1.12)
 pages = {
-    "Lab 1": lambda: load_page("lab1.py"),
-    "Lab 2": lambda: load_page("lab2.py")
+    "Lab 1": st.Page(run_lab1, title="Lab 1"),
+    "Lab 2": st.Page(run_lab2, title="Lab 2")
 }
 
-# Set up the navigation
+# Setup the navigation
 current_page = st.navigation(pages)
 
-# Execute the selected page function
-current_page()
+# Execute the function associated with the current page
+current_page.run()
