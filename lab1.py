@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI, OpenAIError
 
-def run_lab1():
+def lab1():
     # Show title and description.
     st.title("📄 Vedant's Question Answering Chatbot")
     st.write(
