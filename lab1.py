@@ -1,6 +1,7 @@
 import streamlit as st
 from openai import OpenAI, OpenAIError
 
+def lab1()
 st.title("📄 Document Question Answering")
 st.write(
     "Upload a document below and ask a question about it – GPT will answer! "
